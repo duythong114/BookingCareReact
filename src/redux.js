@@ -22,10 +22,12 @@ export const history = createBrowserHistory({ basename: process.env.REACT_APP_RO
 const reduxStateSyncConfig = {
     whitelist: [
         actionTypes.APP_START_UP_COMPLETE,
+        actionTypes.CHANGE_LANGUAGE
     ]
 }
 
 const rootReducer = createRootReducer(history);
+
 const middleware = [
     routerMiddleware(history),
     thunkMiddleware,

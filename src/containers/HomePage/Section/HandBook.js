@@ -1,59 +1,64 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import './Specialty.scss';
-
+import './HandBook.scss'
 import Slider from "react-slick";
 
-// import SpecialtyImg from "../../../assets/specialty/co-xuong-khop.png"
+// import MedicalFacilityImg from "../../../assets/medicalFacility/benh-vien.jpg"
 
-
-class Specialty extends Component {
+class HandBook extends Component {
 
     render() {
+        let settings = {
+            dots: false,
+            infinite: true,
+            speed: 800,
+            slidesToShow: 2,
+            slidesToScroll: 1
+        };
 
         return (
-            <div className='section-specialty'>
+            <div className='section-handbook'>
                 <div className='section-container'>
                     <div className='section-header'>
-                        <span className='header-title'>Chuyên khoa phổ biến</span>
+                        <span className='header-title'>Cẩm nang</span>
                         <button className='header-btn'><span>Xem thêm</span></button>
                     </div>
                     <div className='section-body'>
-                        <Slider {...this.props.settings}>
+                        <Slider {...settings}>
                             <div className='img-container px-3'>
                                 <div className='img-customize'>
-                                    <div className='img-background specialty-img'></div>
-                                    <div className='img-content'>Cơ xương khớp 1</div>
+                                    <div className='img-background handbook-img'></div>
+                                    <div className='img-content'>Bài viết 1</div>
                                 </div>
                             </div>
                             <div className='img-container px-3'>
                                 <div className='img-customize'>
-                                    <div className='img-background specialty-img'></div>
-                                    <div className='img-content'>Cơ xương khớp 2</div>
+                                    <div className='img-background handbook-img'></div>
+                                    <div className='img-content'>Bài viết 2</div>
                                 </div>
                             </div>
                             <div className='img-container px-3'>
                                 <div className='img-customize'>
-                                    <div className='img-background specialty-img'></div>
-                                    <div className='img-content'>Cơ xương khớp 3</div>
+                                    <div className='img-background handbook-img'></div>
+                                    <div className='img-content'>Bài viết 3</div>
                                 </div>
                             </div>
                             <div className='img-container px-3'>
                                 <div className='img-customize'>
-                                    <div className='img-background specialty-img'></div>
-                                    <div className='img-content'>Cơ xương khớp 4</div>
+                                    <div className='img-background handbook-img'></div>
+                                    <div className='img-content'>Bài viết 4</div>
                                 </div>
                             </div>
                             <div className='img-container px-3'>
                                 <div className='img-customize'>
-                                    <div className='img-background specialty-img'></div>
-                                    <div className='img-content'>Cơ xương khớp 5</div>
+                                    <div className='img-background handbook-img'></div>
+                                    <div className='img-content'>Bài viết 5</div>
                                 </div>
                             </div>
                             <div className='img-container px-3'>
                                 <div className='img-customize'>
-                                    <div className='img-background specialty-img'></div>
-                                    <div className='img-content'>Cơ xương khớp 6</div>
+                                    <div className='img-background handbook-img'></div>
+                                    <div className='img-content'>Bài viết 6</div>
                                 </div>
                             </div>
                         </Slider>
@@ -63,12 +68,12 @@ class Specialty extends Component {
         );
     }
 
+
 }
 
 const mapStateToProps = state => {
     return {
-        isLoggedIn: state.user.isLoggedIn,
-        language: state.app.language
+        isLoggedIn: state.user.isLoggedIn
     };
 };
 
@@ -77,4 +82,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Specialty);
+export default connect(mapStateToProps, mapDispatchToProps)(HandBook);
